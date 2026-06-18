@@ -69,6 +69,10 @@ else
 end
 ylim([1e-5 1]);
 
+if exist('save_github_figure', 'file') == 2
+    save_github_figure(gcf, 'bpsk_ber_awgn');
+end
+
 fprintf('BPSK + AWGN örneği tamamlandı.\n');
 fprintf('useRayleigh = true yaparak düz Rayleigh kanalını da deneyebilirsiniz.\n');
 

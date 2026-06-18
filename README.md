@@ -50,6 +50,19 @@ Ham dosya yoksa betik indirme adresini hatırlatır. Dönüşüm sonrası çıkt
 
 Bu repo yalnızca hazırlık betiğini içerir; **GNSS_SDR-master** ve ham kayıtlar ayrı klasörlerde tutulmalıdır (GitHub’a büyük `.bin` dosyaları eklenmez).
 
+## GitHub'a yükleme (MATLAB → sonuç → push)
+
+| Adım | Ne yapılır |
+|------|------------|
+| 1 | MATLAB'te betiği çalıştır |
+| 2 | `save_github_figure(gcf, 'dosya_adi')` → `results/dosya_adi.png` |
+| 3 | PowerShell: `.\push_to_github.ps1 -Message "aciklama"` |
+
+**Repoya giren:** `.m` kodu, `results/*.png`, README  
+**Repoya girmeyen:** `.mat`, `.bin`, ham IF, `*.fig` (`.gitignore`)
+
+Örnek: `wireless_bpsk_awgn_ornek.m` çalışınca otomatik `results/bpsk_ber_awgn.png` üretir.
+
 ## İlişkili repolar
 
 - [gnss-spoofing-research](https://github.com/Alp2246/gnss-spoofing-research) — GNSS spoofing tespiti (MATLAB)
