@@ -4,6 +4,13 @@ Tek dosyalık MATLAB betikleri: **temel dijital iletişim simülasyonu**, **Math
 
 Her betik bağımsızdır; dosyayı açıp **F5** (Run) ile çalıştırmanız yeterlidir.
 
+## Simülasyon çıktıları (grafikler)
+
+### BPSK + AWGN — BER eğrisi
+![BPSK BER AWGN](results/bpsk_ber_awgn.png)
+
+*(QPSK / WLAN / 5G NR grafikleri toolbox kurulunca `export_all_results` ile eklenecek.)*
+
 ## Dosyalar
 
 | Betik | Konu | Gerekli toolbox |
