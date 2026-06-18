@@ -6,12 +6,24 @@ Her betik bağımsızdır; dosyayı açıp **F5** (Run) ile çalıştırmanız y
 
 ## Simülasyon çıktıları (grafikler)
 
-### BPSK + AWGN — BER eğrisi
+---
+
+### BPSK + AWGN — bit hata oranı (BER)
+**Betik:** `wireless_bpsk_awgn_ornek.m`  
+**Toolbox:** Gerekmez (temel MATLAB)  
+**Parametreler:** 500 000 bit/ SNR noktası, Eb/N₀ = 0…12 dB, `rng(42)`
+
 ![BPSK BER AWGN](results/bpsk_ber_awgn.png)
 
-*(QPSK / WLAN / 5G NR grafikleri toolbox kurulunca `export_all_results` ile eklenecek.)*
+**Y ekseni:** bit hata oranı (BER, log ölçek). **X ekseni:** E_b/N₀ (dB).  
+- **Mavi (Simülasyon):** BPSK modülasyon → AWGN kanal → eşik alıcı  
+- **Siyah kesikli (Teorik):** AWGN için kapalı form BER = ½·erfc(√(Eb/N₀))
 
-## Dosyalar
+Eğriler üst üste biniyorsa simülasyon doğru kurulmuş demektir. `useRayleigh = true` ile düz Rayleigh sönümleme de denenebilir.
+
+**Henüz eklenmemiş (toolbox gerekli):** QPSK, 802.11 WLAN, 5G NR — kurulunca `export_all_results` ile `results/` altına eklenir.
+
+---
 
 | Betik | Konu | Gerekli toolbox |
 |-------|------|-----------------|

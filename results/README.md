@@ -1,36 +1,15 @@
-# MATLAB çıktıları (GitHub)
+# Kablosuz iletişim — simülasyon çıktıları
 
-Bu klasöre **küçük sonuç grafikleri** konur; ham veri ve `.mat` dosyaları repoya eklenmez.
+| Dosya | Betik | Açıklama |
+|-------|-------|----------|
+| [bpsk_ber_awgn.png](bpsk_ber_awgn.png) | `wireless_bpsk_awgn_ornek.m` | BPSK BER vs Eb/N₀; simülasyon + teorik AWGN |
 
-## Kaydetme
-
-Betik çalıştırdıktan sonra:
+## Yeniden üretme
 
 ```matlab
-save_github_figure(gcf, 'ornek_adi');
+export_all_results
 ```
-
-Dosya: `results/ornek_adi.png`
-
-## GitHub'a gönderme
-
-PowerShell (repo kökünde):
 
 ```powershell
-.\push_to_github.ps1 -Message "BPSK BER grafigi eklendi"
+.\push_to_github.ps1 -Message "Guncel sonuclar"
 ```
-
-Veya elle:
-
-```powershell
-git add results/ornek_adi.png
-git commit -m "BPSK BER grafigi"
-git push
-```
-
-## Ne yüklenir / yüklenmez
-
-| Yüklenir | Yüklenmez |
-|----------|-----------|
-| `results/*.png`, `results/*.pdf` | `*.mat`, `*.bin`, ham IF |
-| `.m` kaynak kodu | `*.fig`, geçici `.asv` |
